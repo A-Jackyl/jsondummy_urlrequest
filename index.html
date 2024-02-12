@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fetch request</title>
 </head>
 <body>
-    
+<script>
+
+    // Function to fetch data objects from the API
+    function fetchDataObjects() {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            // Display fetched data objects in the console
+            console.log(data);
+        })
+}
+
+// Call the fetchDataObjects function to fetch and display data objects
+fetchDataObjects();
+
+
+</script>
 </body>
 </html>

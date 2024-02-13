@@ -12,10 +12,12 @@
 
     function FetchDataObjects() {
 
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://dummyjson.com/products')
+        // This fetch pulls the data from the API and returns it as json data.
         .then((result) => {
             return result.json();
         })
+        // This puts the json data into the ProductsReceived function which gets used below.
         .then((json) => {
             ProductsReceived(json);
         })
@@ -23,7 +25,44 @@
 
     function ProductsReceived(ProductData) {
 
+        //logs all the products (limited to 30?)
         console.log(ProductData)
+    
+        // Makes a veriable that collects specifically the products from the array. Used in the custom array below to save code.
+        let ProductItem = ProductData.products
+
+        //this code just activates the array. One line down we are filling the array with DataObjects
+        let FeaturedProduct = [];
+
+        // "pushing" means taking the data we extracted earlier and pushing it into this array
+        FeaturedProduct.push(ProductItem[4], ProductItem[10], ProductItem[24])
+
+        //show selected (or pushed) DataObjects in console
+        console.log(FeaturedProduct);
+
+        // Pop takes the last Object in an Array
+        let PoppedProduct = [FeaturedProduct.pop()];
+        
+        console.log(PoppedProduct);
+        
+        // Shift takes the first Object in an Array
+        let ShiftedProduct = [FeaturedProduct.shift()];
+        
+        console.log(ShiftedProduct);
+        
+        // Moves a specified number of objects to the front of the array
+        let UnshiftedProduct = [FeaturedProduct.unshift()];
+        
+        console.log(UnshiftedProduct);
+        
+        // Moves a specified number of objects to the front of the array
+        let SlicedProduct = [FeaturedProduct.slice()];
+    
+        console.log(SlicedProduct);
+
+        let ForEachProduct = [FeaturedProduct.forEach()];
+    
+        console.log(ForEachProduct);
     }
 
 

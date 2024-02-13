@@ -27,43 +27,43 @@
 
         //logs all the products (limited to 30?)
         console.log(ProductData)
-    
+        
         // Makes a veriable that collects specifically the products from the array. Used in the custom array below to save code.
-        let ProductItem = ProductData.products
-
+        const ProductItem = ProductData.products
+        
         //this code just activates the array. One line down we are filling the array with DataObjects
         let FeaturedProduct = [];
-
+        
         // "pushing" means taking the data we extracted earlier and pushing it into this array
         FeaturedProduct.push(ProductItem[4], ProductItem[10], ProductItem[24])
-
-        //show selected (or pushed) DataObjects in console
-        console.log(FeaturedProduct);
-
-        // Pop takes the last Object in an Array
-        let PoppedProduct = [FeaturedProduct.pop()];
         
-        console.log(PoppedProduct);
+        //show selected (or pushed) DataObjects in console
+        //console.log(FeaturedProduct);
+        
+        // Pop takes the last Object in an Array
+        console.log(ProductItem.pop());
         
         // Shift takes the first Object in an Array
-        let ShiftedProduct = [FeaturedProduct.shift()];
-        
-        console.log(ShiftedProduct);
+        console.log(ProductItem.shift());
         
         // Moves a specified number of objects to the front of the array
-        let UnshiftedProduct = [FeaturedProduct.unshift()];
-        
-        console.log(UnshiftedProduct);
+        console.log(ProductItem.unshift(11, 16));
         
         // Moves a specified number of objects to the front of the array
-        let SlicedProduct = [FeaturedProduct.slice()];
-    
-        console.log(SlicedProduct);
-
+        console.log(ProductItem.slice(3));
+        
         // turns each DataObject into a seperate log
-        let ForEachProduct = [FeaturedProduct.forEach()];
+        ProductItem.forEach((element) => console.log(element));
     
-        console.log(ForEachProduct);
+        //console.log(ForEachProduct);
+
+        LotsOfNumbers()
+
+        var NumberBunch = [100, 200];
+
+        function LotsOfNumbers() {
+            //console.log(NumberBunch)
+        }
     }
 
 

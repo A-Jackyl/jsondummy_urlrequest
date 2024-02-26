@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch request</title>
+</head>
+<body>
+<script>
+
+    FetchDataObjects ()
+
+    function FetchDataObjects() {
+
+    fetch('https://dummyjson.com/products')
+        // This fetch pulls the data from the API and returns it as json data.
+        .then((result) => {
+            return result.json();
+        })
+        // This puts the json data into the ProductsReceived function which gets used below.
+        .then((json) => {
+            ProductsReceived(json);
+        })
+    }
+
+    function ProductsReceived(ProductData) {
+
+        //logs all the products (limited to 30?)
+        console.log(ProductData)
+        
+        // Makes a veriable that collects specifically the products from the array. Used in the custom array below to save code.
+        const ProductItem = ProductData.products
+        
+        //this code just activates the array. One line down we are filling the array with DataObjects
+        let FeaturedProduct = [];
+        
+        // "pushing" means taking the data we extracted earlier and pushing it into this array
+        FeaturedProduct.push(ProductItem[4], ProductItem[10], ProductItem[24])
+        
+        //show selected (or pushed) DataObjects in console
+        //console.log(FeaturedProduct);
+        
+        // Pop takes the last Object in an Array
+        console.log(ProductItem.pop());
+        
+        // Shift takes the first Object in an Array
+        console.log(ProductItem.shift());
+        
+        // Moves a specified number of objects to the front of the array
+        console.log(ProductItem.unshift(11, 16));
+        
+        // Moves a specified number of objects to the front of the array
+        console.log(ProductItem.slice(3));
+        
+        // turns each DataObject into a seperate log
+        ProductItem.forEach((element) => console.log(element));
+     
+    }
+
+
+</script>
+
+<section id="FeaturedItems">
+
+</section>
+</body>
+</html>

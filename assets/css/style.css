@@ -1,19 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Karantina", system-ui;
+    font-size: 2rem;
+}
+
+p {
+
+}
+
+a {
+    text-decoration: none;
+    color:#000
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    max-width: 80vw;
+    margin-inline: auto;
+}
+
+.break {
+    background-color: #000;
+    height: 2px;
+    margin-block: 3rem;
+}
+
+#blue_br {
+    background-color: #219EBC;
+    height: 6px;
+}
+
+#featured_h2 {
+    text-align: center;
+    color: #023047;
+    margin-block: 3rem;
+}
+
+.product_card_section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.product_card_item {
+    flex: 0 0 3;
+    width: 250px;
+    min-height: 400px;
+    height: 100%;
+    background-color: #F1F1F1;
+    padding: 14px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 5px;
+    filter: drop-shadow(7px 7px 0px rgba(0, 0, 0, 0.3));
+    margin-block-end: 3rem;
+    cursor: pointer;
+}
+
+.product_card_item h2 {
+    height: 50px;
+    font-weight: 400;
+    margin-block-end: -.8rem;
+}
+
+.card_item_cat {
+    color: #219EBC;
+}
+
+.product_card_item img {
+    object-fit: contain;
+    height: 250px;
+    width: 100%;
+    margin-block: 1rem;
+}
+
+.card_item_desc {
+    overflow: hidden;
+    height: 100px;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.card_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.card_item_price {
+    font-family: "Karantina", system-ui;
+    font-size: 3rem;
+    margin-inline-start: 1rem;
+}
+
+.bottom_btn {
+    display: inline;
+    height: 40px;
+    right: 0;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    filter: brightness(1);
+    transition-duration: .2s;
+    transform: translateX(0px);
+}
+
+.product_card_item:hover .bottom_btn {
+    filter: brightness(.8);
+    transform: translateX(4px);
+    transition-duration: .2s;
+}
+
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+}
+
+footer {
+    padding-block: 3rem;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.footer_content ul li {
+    text-align: right;
+    margin-bottom: 1rem;
 }
 
 #shopping_cart {
     cursor: pointer;
-    height: 200px;
+    height: 80px;
+}
+
+nav {
+    background-color: rgb(255, 106, 0);
+}
+
+nav h3 {
+    color: #fff;
+}
+
+nav li {
+    color: #fff;
 }
 
 #nav {
-    background-color: rgb(255, 106, 0);
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 2rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navCategories h3 {
+    margin-bottom: 1rem;
+}
+
+.navCategories li {
+    margin-bottom: .2rem;
 }
 
 .navRollover {

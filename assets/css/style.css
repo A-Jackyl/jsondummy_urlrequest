@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#shopping_cart {
+    cursor: pointer;
+    height: 200px;
+}
+
+#nav {
+    background-color: rgb(255, 106, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.navRollover {
+    background-color: rgb(255, 106, 0);
+    cursor: pointer;
+  }
+  
+  .navRollover:hover {
+    background-color: rgb(122, 52, 2);
+  }
